@@ -45,7 +45,7 @@ export const SeatSelection = ({
       setRightSeat(data2);
       setSelectedSeat([]);
       setError("");
-  }, [IsModalOpen]);
+  }, [IsModalOpen, bus]);
 
 
   const handleClose = () => {
