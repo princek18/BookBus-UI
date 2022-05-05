@@ -1,0 +1,24 @@
+.buslist{
+    left: 10%;
+    top: 10%;
+    position: relative;
+    width: 80%;
+    min-height: 400px;
+    background: aliceblue;
+    text-align: center;
+}
+.inner{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    background-color: white;
+    padding: 10px;
+    text-align: left;
+}
+.one{
+    display: flex;
+    justify-content: space-between;
+}
+.p-1{
+    width: 200px;
+}

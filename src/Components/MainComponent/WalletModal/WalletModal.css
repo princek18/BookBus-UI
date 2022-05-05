@@ -1,0 +1,10 @@
+.frm-w{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cross{
+    margin-left: auto;
+    display: flex;
+    cursor: pointer; 
+}

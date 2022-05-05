@@ -1,0 +1,35 @@
+.bus-body{
+    display: flex;
+    width: 60%;
+    height: 200px;
+    margin: auto;
+    border: 1px solid gray;
+}
+.front-bus{
+    width: 15%;
+    border-right: 1px solid gray;
+    padding-top: 88px;
+}
+.back-bus{
+    width: 85%;
+}
+.seat-height{
+    height: 100px;
+}
+.seat-list{
+    padding-top: 17px;
+    display: flex;
+    justify-content: center;
+}
+.seat{
+    cursor: pointer;
+    border: 0.5px solid black;
+    height: 66px;
+    width: 35px;
+    margin-left: 5px;
+    text-align: center;
+}
+.inst{
+    display: flex;
+    justify-content: space-between;
+}

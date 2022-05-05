@@ -1,0 +1,11 @@
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 4rem;
+    background: aliceblue;
+    position: relative;
+    top: 2vh;
+    width: 80%;
+}

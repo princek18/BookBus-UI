@@ -1,0 +1,10 @@
+.foot{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    position: fixed;
+    background: blue;
+    top: 92vh;
+}

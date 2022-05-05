@@ -1,0 +1,30 @@
+.form-cmp{
+    background: aliceblue;
+    width: 400px;
+    height: 470px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    margin-top: 15vh;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px 0px;
+    overflow: hidden;
+}
+.frm{
+    margin: 100px 10px;
+}
+.login{
+    display: flex;
+    justify-content: center;
+}
+.out{
+    background-image: url("../../../public/scene.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

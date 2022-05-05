@@ -1,0 +1,23 @@
+.size-2{
+    margin-bottom: 20px;
+}
+.size-1{
+    margin-bottom: 10px;
+}
+.search{
+    padding: 20px 20px;
+    border-radius: 10px;
+    height: 500px;
+    width: 400px;
+    background: aliceblue;
+    top: 5%;
+    left: 10%;
+    position: absolute;
+    margin: auto;
+    margin-top: 15vh;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    overflow: hidden;
+}
+.label{
+    font-size: 10px;
+}
