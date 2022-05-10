@@ -1,0 +1,8 @@
+@media print {
+    .head{
+        display: none;
+    }
+    .tkt-btn{
+        display: none;
+    }
+}

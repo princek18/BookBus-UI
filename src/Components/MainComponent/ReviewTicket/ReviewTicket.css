@@ -1,0 +1,49 @@
+.back{
+    overflow-y: auto;
+    left: 10%;
+    top: 10%;
+    position: relative;
+    width: 80%;
+    height: 75%;
+    background: aliceblue;
+    text-align: left;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.tkt-head{
+    padding: 20px 20px 0px 20px;
+    margin: 10px 0px 10px 0px;
+}
+.tkt-body{
+    padding: 20px 20px 0px 20px;
+    margin: 10px 0px 10px 0px;
+}
+.tkt-pass{
+    padding: 20px 20px 0px 20px;
+    margin: 10px 0px 10px 0px;
+}
+.tkt-pay{
+    padding: 20px 20px 0px 20px;
+    height: 150px;
+    margin: 10px 0px 10px 0px;
+}
+.tkt-btn{
+    text-align: center;
+    margin-top: 20px;
+}
+.pass-1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pass{
+    background: white;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.pay{
+    background-color: white;
+    padding: 10px;
+}

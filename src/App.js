@@ -6,6 +6,9 @@ import { SignUpComponent } from "./Components/SignUpComponent/SignUpComponent";
 import { Loader } from "./Components/Loader/Loader";
 import MainComponent from "./Components/MainComponent/MainComponent";
 import { BusList } from "./Components/MainComponent/BusList/BusList";
+import { ReviewTicket } from "./Components/MainComponent/ReviewTicket/ReviewTicket";
+import { BookedTicket } from "./Components/MainComponent/BookedTicketComponent/BookedTicket";
+import { TicketList } from "./Components/MainComponent/BookedTicketList/TicketList";
 
 export const baseUrl = "http://127.0.0.1:4000";
 
@@ -46,6 +49,33 @@ function App() {
                 <AuthRoute>
                   <MainComponent isSearch={false}/>
                   <BusList />
+                </AuthRoute>
+              }
+            />
+            <Route
+              path="/review"
+              element={
+                <AuthRoute>
+                  <MainComponent isSearch={false}/>
+                  <ReviewTicket />
+                </AuthRoute>
+              }
+            />
+            <Route
+              path="/ticket"
+              element={
+                <AuthRoute>
+                  <MainComponent isSearch={false}/>
+                  <BookedTicket />
+                </AuthRoute>
+              }
+            />
+            <Route
+              path="/mybookings"
+              element={
+                <AuthRoute>
+                  <MainComponent isSearch={false}/>
+                  <TicketList />
                 </AuthRoute>
               }
             />

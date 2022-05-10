@@ -21,5 +21,6 @@ export const logout = () => {
   localStorage.removeItem('authToken');
   localStorage.removeItem('name');
   localStorage.removeItem('usertype');
+  localStorage.removeItem('userId');
   window.location.reload();
 }

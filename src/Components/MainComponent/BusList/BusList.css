@@ -1,9 +1,10 @@
 .buslist{
+    overflow-y: auto;
     left: 10%;
     top: 10%;
     position: relative;
     width: 80%;
-    min-height: 400px;
+    height: 75%;
     background: aliceblue;
     text-align: center;
 }
@@ -14,6 +15,7 @@
     background-color: white;
     padding: 10px;
     text-align: left;
+    margin-bottom: 20px;
 }
 .one{
     display: flex;

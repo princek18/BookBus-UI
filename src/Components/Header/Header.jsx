@@ -10,7 +10,7 @@ export const Header = ({ setUrlHref, urlHref, wallet }) => {
   };
   return (
     <header className="head">
-      <Link to='/'><h2 style={{ margin: "0px", marginLeft: "10px" }}>BookBus</h2></Link>
+      <Link to='/'><h2 onClick={changeURL} style={{ margin: "0px", marginLeft: "10px" }}>BookBus</h2></Link>
       {localStorage.getItem("authToken") ? (
         <div
           style={{
@@ -27,7 +27,7 @@ export const Header = ({ setUrlHref, urlHref, wallet }) => {
             </div>
           </Link>
           <Link to="/mybookings">
-            <div onClick={changeURL} style={{ marginLeft: "10px" }}>
+            <div style={{ marginLeft: "10px" }}>
               My Bookings
             </div>
           </Link>

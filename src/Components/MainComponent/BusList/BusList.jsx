@@ -49,12 +49,13 @@ export const BusList = () => {
           <div className="one">
             <p className="p-1">Total Seats: {total}</p>
             <p className="p-1">Available Seats: {available}</p>
+            <p className="p-1">Fare: ₹{bus.fare}</p>
           </div>
         </div>
         )
       })}
     </div>
-    <SeatSelection setIsModalOpen={setIsModalOpen} journeyClass={journeyClass} busType={busType} bus={busData} IsModalOpen={isModalOpen}/>
+    <SeatSelection setIsModalOpen={setIsModalOpen} user={user} bus={busData} IsModalOpen={isModalOpen}/>
     </>
   );
 };

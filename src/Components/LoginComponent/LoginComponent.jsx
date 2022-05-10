@@ -20,6 +20,7 @@ export const LoginComponent = (props) => {
           "name",
           res.data.user.firstName + " " + res.data.user.lastName
         );
+        localStorage.setItem("userId", res.data.user._id);
         navigate("/");
       })
       .catch((err) => {
