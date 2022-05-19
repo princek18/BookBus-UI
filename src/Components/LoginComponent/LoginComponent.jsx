@@ -1,12 +1,11 @@
-import { Button, Form, Input } from "antd";
+import { Button, Form, Input, Select } from "antd";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ErrorPopUp } from "../../utlis/ErrorPopUp";
 import { requestAPI } from "../../utlis/utils";
 import "./LoginComponent.css";
 
-export const LoginComponent = (props) => {
-  const navigate = useNavigate();
+export const LoginComponent = () => {
   const [openErrorPopUp, setOpenErrorPoUp] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const onLogin = (values) => {
@@ -21,7 +20,7 @@ export const LoginComponent = (props) => {
           res.data.user.firstName + " " + res.data.user.lastName
         );
         localStorage.setItem("userId", res.data.user._id);
-        navigate("/");
+        window.location.href = '/';
       })
       .catch((err) => {
         document.getElementById("loader").style.display = "none";
@@ -39,10 +38,10 @@ export const LoginComponent = (props) => {
           className="frm"
           name="basic"
           labelCol={{
-            span: 6,
+            span: 24,
           }}
           wrapperCol={{
-            span: 18,
+            span: 24,
           }}
           initialValues={{
             remember: true,
@@ -60,7 +59,7 @@ export const LoginComponent = (props) => {
               },
             ]}
           >
-            <Input type="email" />
+            <Input placeholder="Email" type="email" />
           </Form.Item>
 
           <Form.Item
@@ -73,19 +72,30 @@ export const LoginComponent = (props) => {
               },
             ]}
           >
-            <Input.Password />
+            <Input.Password placeholder="Password" />
           </Form.Item>
 
           <Form.Item
-            wrapperCol={{
-              offset: 6,
-              span: 18,
-            }}
+            label="User Type"
+            name="userType"
+            rules={[
+              {
+                required: true,
+                message: "Please select User Type!",
+              },
+            ]}
           >
-            <Button type="primary" htmlType="submit">
+            <Select defaultValue="Option">
+              <Select.Option value="Normal">Normal</Select.Option>
+              <Select.Option value="Admin">Admin</Select.Option>
+            </Select>
+          </Form.Item>
+          <div style={{textAlign: "center"}} > 
+          <Button type="primary" htmlType="submit">
               Submit
             </Button>
-          </Form.Item>
+          </div>
+
         </Form>
         <div className="login">
           <Link to="/signup">

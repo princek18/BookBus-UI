@@ -1,21 +1,24 @@
 .form-cmp-s{
     background: aliceblue;
-    width: 450px;
-    height: 530px;
+    width: 400px;
+    height: 640px;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     position: absolute;
     margin: auto;
-    margin-top: 15vh;
+    margin-top: 10vh;
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 10px 0px;
-    overflow: hidden;
+    overflow: auto;
 }
 .frm-s{
-    margin: 30px 10px;
+    margin: 10px 60px;
+}
+.ant-form-item{
+    margin-bottom: 5px;
 }
 .login{
     display: flex;
@@ -28,3 +31,19 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+@media screen and (max-width: 400px) {
+    .form-cmp-s {
+        width: 80%;
+        height: 85%;
+    }
+    .frm-s{
+        margin: 10px 30px;
+    }
+  }
+
+  @media screen and (max-height: 600px) {
+    .form-cmp-s {
+        width: 40%;
+        height: 85%;
+    }
+  }

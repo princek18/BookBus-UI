@@ -42,7 +42,7 @@ export const BookedTicket = () => {
       <>
         {resData.bus && resData.ticket ?
             <div className="back">
-        <h2 style={{ textAlign: "center" }}>Booked Ticket:</h2>
+        <h2 style={{ textAlign: "center" }}>Ticket Booked:</h2>
         <div className="tkt-head">
           <h2>Bus No. : {resData.bus.busNumber}</h2>
         </div>

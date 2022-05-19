@@ -6,6 +6,7 @@ import { RiArrowUpDownLine } from "react-icons/ri";
 import { logout, requestAPI } from "../../../utlis/utils";
 import { ErrorPopUp } from "../../../utlis/ErrorPopUp";
 import { useNavigate } from "react-router-dom";
+import moment from "moment";
 
 export const SearchBus = () => {
   const [openErrorPopUp, setOpenErrorPoUp] = useState(false);
@@ -26,9 +27,12 @@ export const SearchBus = () => {
   });
   const [validationMessage, setValidationMessage] = useState("");
   const [resData, setResData] = useState("");
+  const [today, setToday] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
+    let k = moment().format('YYYY-MM-DD');
+    setToday(k);
     document.getElementById("loader").style.display = "block";
     requestAPI('GET', '/getdropdwonvalues', null, null)
     .then((res) => {
@@ -267,7 +271,7 @@ export const SearchBus = () => {
         </div>
         <div style={{ width: "47%" }}>
             <label style={error.journeyDate? {color: "red"}: null} htmlFor="jorneyDate">Date of Journey:</label>
-            <Input id="journeyDate" onChange={handleChange.journeyDate} name="journeyDate" type="date" value={userForm.journeyDate} />
+            <Input id="journeyDate" onChange={handleChange.journeyDate} name="journeyDate" min={today} type="date" value={userForm.journeyDate} />
           </div>
         <Button style={{ width: "100%", marginTop: "20px"}} type="primary" onClick={handleSubmit}>
           Submit

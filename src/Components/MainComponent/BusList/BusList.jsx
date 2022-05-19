@@ -1,5 +1,6 @@
+import { Button } from "@mui/material";
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { SeatSelection } from "../SeatSelection/SeatSelection";
 import "./BusList.css";
 
@@ -39,7 +40,7 @@ export const BusList = () => {
           <div className="one">
             <p className="p-1">Origin: {origin}</p>
             <p className="p-1">Destination: {destination}</p>
-            <p className="p-1">Distance: {bus.distance}</p>
+            <p className="p-1">Distance: {bus.distance} KM</p>
           </div>
           <div className="one">
             <p className="p-1">Departure Time: {bus.departureTime}</p>
@@ -54,6 +55,10 @@ export const BusList = () => {
         </div>
         )
       })}
+      <Link to="/">
+      <Button variant="contained" color="primary">
+        Back
+      </Button></Link>
     </div>
     <SeatSelection setIsModalOpen={setIsModalOpen} user={user} bus={busData} IsModalOpen={isModalOpen}/>
     </>

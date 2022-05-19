@@ -220,14 +220,14 @@ export const SeatSelection = ({
             </div>
             <div className="inst">
               <div
-                style={{ background: "gray" }}
+                style={{ background: "green" }}
                 className={journeyClass === "Sleeper" ? "sleep" : "seat"}
               />
               <h3 style={{ margin: "auto", marginLeft: "5px" }}>Selected</h3>
             </div>
             <div className="inst">
               <div
-                style={{ background: "#D3D3D3" }}
+                style={{ background: "red" }}
                 className={journeyClass === "Sleeper" ? "sleep" : "seat"}
               />
               <h3 style={{ margin: "auto", marginLeft: "5px" }}>Booked</h3>
@@ -252,10 +252,10 @@ export const SeatSelection = ({
                           className="sleep"
                           style={
                             upSeat[one] === "true"
-                              ? { background: "gray", color: "white" }
+                              ? { background: "green", color: "white" }
                               : upSeat[one] === "booked"
                               ? {
-                                  background: "#D3D3D3",
+                                  background: "red",
                                   color: "white",
                                   cursor: "auto",
                                 }
@@ -281,10 +281,10 @@ export const SeatSelection = ({
                           className="seat"
                           style={
                             rightSeat[one] === "true"
-                              ? { background: "gray", color: "white" }
+                              ? { background: "green", color: "white" }
                               : rightSeat[one] === "booked"
                               ? {
-                                  background: "#D3D3D3",
+                                  background: "red",
                                   color: "white",
                                   cursor: "auto",
                                 }
@@ -313,10 +313,10 @@ export const SeatSelection = ({
                           className="sleep"
                           style={
                             downSeat[one] === "true"
-                              ? { background: "gray", color: "white" }
+                              ? { background: "green", color: "white" }
                               : downSeat[one] === "booked"
                               ? {
-                                  background: "#D3D3D3",
+                                  background: "red",
                                   color: "white",
                                   cursor: "auto",
                                 }
@@ -342,10 +342,10 @@ export const SeatSelection = ({
                           className="seat"
                           style={
                             leftSeat[one] === "true"
-                              ? { background: "gray", color: "white" }
+                              ? { background: "green", color: "white" }
                               : leftSeat[one] === "booked"
                               ? {
-                                  background: "#D3D3D3",
+                                  background: "red",
                                   color: "white",
                                   cursor: "auto",
                                 }

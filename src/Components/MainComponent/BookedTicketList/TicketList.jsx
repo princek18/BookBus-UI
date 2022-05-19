@@ -1,5 +1,6 @@
+import { Button } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ErrorPopUp } from '../../../utlis/ErrorPopUp';
 import { logout, requestAPI } from '../../../utlis/utils';
 import './TicketList.css'
@@ -62,6 +63,10 @@ export const TicketList = () => {
         </div>
         )
       }): <h1>No bookings available</h1>}
+            <Link to="/">
+      <Button variant="contained" color="primary">
+        Back
+      </Button></Link>
     </div>
         <ErrorPopUp
         message={errorMessage}

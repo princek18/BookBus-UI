@@ -115,7 +115,8 @@ export const ReviewTicket = () => {
         fare: price,
         password,
         seats: selectedSeat,
-        passengers
+        passengers,
+        userType: localStorage.getItem('usertype')
       }
       requestAPI("POST", "/bookticket", data, null)
         .then((res) => {
@@ -148,7 +149,7 @@ export const ReviewTicket = () => {
           <div className="one">
             <p className="p-1">Origin: {origin}</p>
             <p className="p-1">Destination: {destination}</p>
-            <p className="p-1">Distance: {bus.distance}</p>
+            <p className="p-1">Distance: {bus.distance} KM</p>
           </div>
           <div className="one">
             <p className="p-1">Departure Time: {bus.departureTime}</p>

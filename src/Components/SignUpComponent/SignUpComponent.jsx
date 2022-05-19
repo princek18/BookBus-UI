@@ -42,10 +42,10 @@ export const SignUpComponent = () => {
           className="frm-s"
           name="basic"
           labelCol={{
-            span: 8,
+            span: 24,
           }}
           wrapperCol={{
-            span: 16,
+            span: 24,
           }}
           initialValues={{
             remember: true,
@@ -154,16 +154,11 @@ export const SignUpComponent = () => {
             <Input.Password />
           </Form.Item>
 
-          <Form.Item
-            wrapperCol={{
-              offset: 8,
-              span: 16,
-            }}
-          >
+          <div style={{textAlign: "center"}}>
             <Button type="primary" htmlType="submit">
               Submit
             </Button>
-          </Form.Item>
+          </div>
         </Form>
         <div className="login">
           <Link to="/login">Click here to Login</Link>

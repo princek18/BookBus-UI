@@ -58,6 +58,11 @@ const ChildModal = ({
           let response = res.data.user;
           setSuccessMessage(res.data.message);
           setOpenSuccessPoUp(true);
+          if (userForm.npassword !== null && userForm.npassword !== "") {
+            setTimeout(() => {
+              logout();
+            }, 2000)  
+          };
           setUserForm({
             email: response.email,
             firstName: response.firstName,
@@ -197,10 +202,10 @@ export const ProfilesModal = ({ IsModalOpen, urlHref, setUrlHref }) => {
             className="frm-s"
             name="basic"
             labelCol={{
-              span: 8,
+              span: 24,
             }}
             wrapperCol={{
-              span: 16,
+              span: 24,
             }}
             initialValues={{
               remember: true,

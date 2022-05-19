@@ -9,6 +9,10 @@ import { BusList } from "./Components/MainComponent/BusList/BusList";
 import { ReviewTicket } from "./Components/MainComponent/ReviewTicket/ReviewTicket";
 import { BookedTicket } from "./Components/MainComponent/BookedTicketComponent/BookedTicket";
 import { TicketList } from "./Components/MainComponent/BookedTicketList/TicketList";
+import { AdminHeader } from "./AdminComponents/AdminHeader/AdminHeader";
+import { AddBuses } from "./AdminComponents/AddBuses/AddBuses";
+import { AdminBusList } from "./AdminComponents/AdminBusList/AdminBusList";
+import { AdminTickets } from "./AdminComponents/AdminTickets/AdminTickets";
 
 export const baseUrl = "http://127.0.0.1:4000";
 
@@ -20,6 +24,14 @@ export const AuthRoute = ({ children }) => {
   return children;
 };
 
+const AuthAdminRoute = ({ children }) => {
+  if (!localStorage.getItem("authToken") && localStorage.getItem('usertype') !== "Admin") {
+    return <Navigate to="/login" />;
+  }
+
+  return children;
+}
+
 function App() {
   return (
     <div className="App">
@@ -27,6 +39,43 @@ function App() {
         <Loader />
         <BrowserRouter>
           <Routes>
+            {localStorage.getItem('usertype') === 'Admin'?
+            <>
+            <Route
+              path="/admin"
+              element={
+                <AuthAdminRoute>
+                  <AdminHeader/>
+                  <AddBuses/>
+                </AuthAdminRoute>
+              }
+            />
+            <Route
+              path="/admin/buses"
+              element={
+                <AuthAdminRoute>
+                  <AdminHeader/>
+                  <AdminBusList/>
+                </AuthAdminRoute>
+              }
+            />
+            <Route
+              path="/admin/tickets"
+              element={
+                <AuthAdminRoute>
+                  <AdminHeader/>
+                  <AdminTickets/>
+                </AuthAdminRoute>
+              }
+            />
+            <Route
+              path="/admin/*"
+              element={
+                <AuthAdminRoute>
+                  <AdminHeader/>
+                </AuthAdminRoute>
+              }
+            /></>: null}
             <Route
               path="*"
               element={

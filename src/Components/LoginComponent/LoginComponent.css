@@ -1,7 +1,7 @@
 .form-cmp{
     background: aliceblue;
     width: 400px;
-    height: 470px;
+    height: 430px;
     top: 0;
     bottom: 0;
     left: 0;
@@ -12,10 +12,10 @@
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 10px 0px;
-    overflow: hidden;
+    overflow: auto;
 }
 .frm{
-    margin: 100px 10px;
+    margin: 20px 50px;
 }
 .login{
     display: flex;
@@ -28,3 +28,11 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+@media screen and (max-width: 400px) {
+    .form-cmp {
+        width: 80%;
+    }
+    .frm{
+        margin: 10px 30px;
+    }
+  }

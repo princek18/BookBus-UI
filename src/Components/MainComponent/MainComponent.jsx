@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ErrorPopUp } from "../../utlis/ErrorPopUp";
 import { logout, requestAPI } from "../../utlis/utils";
 import { Header } from "../Header/Header";
@@ -14,8 +15,12 @@ const MainComponent = ({isSearch}) => {
   const [errorMessage, setErrorMessage] = useState("");
   const [openWalletModal, setOpenWalletModal] = useState(false);
   const [openProfilesModal, setOpenProfilesModal] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
+    if (localStorage.getItem('usertype') === 'Admin') {
+      navigate('/admin')
+    }
     document.getElementById("loader").style.display = "block";
     requestAPI("GET", "/getwallet", null, null)
       .then((res) => {
