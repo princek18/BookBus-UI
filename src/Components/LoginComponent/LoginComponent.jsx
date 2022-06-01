@@ -1,6 +1,6 @@
 import { Button, Form, Input, Select } from "antd";
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ErrorPopUp } from "../../utlis/ErrorPopUp";
 import { requestAPI } from "../../utlis/utils";
 import "./LoginComponent.css";
@@ -90,6 +90,10 @@ export const LoginComponent = () => {
               <Select.Option value="Admin">Admin</Select.Option>
             </Select>
           </Form.Item>
+
+          <div style={{margin: "5px 0px"}}>
+            <Link to="/reset">Forgot Password?</Link>
+          </div>
           <div style={{textAlign: "center"}} > 
           <Button type="primary" htmlType="submit">
               Submit

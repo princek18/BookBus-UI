@@ -188,7 +188,7 @@ export const WalletModal = ({
             />
             <Button
               style={{ width: "25%", marginTop: "20px" }}
-              color="success"
+              color="primary"
               variant="contained"
               type="submit"
             >

@@ -13,6 +13,7 @@ import { AdminHeader } from "./AdminComponents/AdminHeader/AdminHeader";
 import { AddBuses } from "./AdminComponents/AddBuses/AddBuses";
 import { AdminBusList } from "./AdminComponents/AdminBusList/AdminBusList";
 import { AdminTickets } from "./AdminComponents/AdminTickets/AdminTickets";
+import { ResetPassword } from "./Components/ResetPassword/ResetPassword";
 
 export const baseUrl = "http://127.0.0.1:4000";
 
@@ -130,6 +131,7 @@ function App() {
             />
             <Route path="/login" element={<LoginComponent />} />
             <Route path="/signup" element={<SignUpComponent />} />
+            <Route path="/reset" element={<ResetPassword/>} />
           </Routes>
         </BrowserRouter>
       </div>
