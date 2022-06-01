@@ -17,7 +17,7 @@ import { ResetPassword } from "./Components/ResetPassword/ResetPassword";
 
 // export const baseUrl = "http://127.0.0.1:4000";
 
-export const baseUrl = "https://book-bus-backend.vercel.app";
+export const baseUrl = "https://book-bus-pk18.herokuapp.com/";
 
 export const AuthRoute = ({ children }) => {
   if (!localStorage.getItem("authToken")) {
