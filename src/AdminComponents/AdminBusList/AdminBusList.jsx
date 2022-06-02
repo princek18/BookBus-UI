@@ -39,7 +39,6 @@ const BookingDate = ({
   };
 
   const onDone = (value) => {
-    setIsModalOpen(false);
     let data = {extensionDate: value.extensionDate, newDate: date, busId}
     document.getElementById("loader").style.display = "block";
     requestAPI('PUT', '/extension', data, null)
@@ -47,6 +46,7 @@ const BookingDate = ({
       document.getElementById("loader").style.display = "none";
       setSuccessMessage(res.data.message);
       setOpenSuccessPoUp(true);
+      setIsModalOpen(false);
   })
   .catch((err) => {
       document.getElementById("loader").style.display = "none";
