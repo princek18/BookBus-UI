@@ -17,7 +17,7 @@ import { ResetPassword } from "./Components/ResetPassword/ResetPassword";
 
 // export const baseUrl = "http://127.0.0.1:4000";
 
-export const baseUrl = "http://ec2-18-217-106-214.us-east-2.compute.amazonaws.com/";
+export const baseUrl = "https://book-bus-be.onrender.com/";
 
 export const AuthRoute = ({ children }) => {
   if (!localStorage.getItem("authToken")) {
